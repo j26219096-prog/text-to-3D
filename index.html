@@ -154,7 +154,8 @@ function addMessage(text, cls) {
 const MODEL_MAP = {
   human: "models/human.glb",
   chair: "models/chair.glb",
-  table: "models/table.glb"
+  table: "models/table.glb",
+  heart: "models/heart.glb"
 };
 
 document.getElementById("btn").onclick = () => {
@@ -168,7 +169,7 @@ document.getElementById("btn").onclick = () => {
 
   if (prompt.includes("chair")) modelPath = MODEL_MAP.chair;
   if (prompt.includes("table")) modelPath = MODEL_MAP.table;
-
+  if (prompt.include("heart")) modelpath = MODEL_MAP.heart;
   addMessage("Loading 3D model...", "bot");
 
   if (model) scene.remove(model);
